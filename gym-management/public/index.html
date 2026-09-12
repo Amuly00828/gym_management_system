@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gym Membership Management System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="shell">
+  <aside class="rail">
+    <div class="rail-head">
+      <div class="mark">GM</div>
+      <div class="rail-title">
+        <strong>Gym Membership</strong>
+        <span>Management System</span>
+      </div>
+    </div>
+    <nav id="nav" class="nav"></nav>
+    <div class="rail-foot">Node + Express + PostgreSQL</div>
+  </aside>
+
+  <main class="stage">
+    <header class="stage-head">
+      <h1 id="section-title">Basic Queries</h1>
+      <p id="section-sub">Fundamental SELECT statements over the core tables.</p>
+    </header>
+
+    <div id="action-row" class="action-row"></div>
+    <div id="form-row" class="form-row" hidden></div>
+
+    <section class="result">
+      <div class="result-head">
+        <span id="result-label">Results</span>
+        <span id="result-meta" class="result-meta"></span>
+      </div>
+      <div id="result-body" class="result-body">
+        <p class="placeholder">Pick a query on the left to run it against the live database.</p>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

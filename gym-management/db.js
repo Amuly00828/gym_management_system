@@ -1,0 +1,13 @@
+const { Pool } = require('pg');
+require('dotenv').config();
+
+// Render provides DATABASE_URL automatically when a Postgres DB is
+// attached to the web service. Locally, set it in a .env file.
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  ssl: process.env.DATABASE_URL && process.env.DATABASE_URL.includes('render.com')
+    ? { rejectUnauthorized: false }
+    : (process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false)
+});
+
+module.exports = pool;
